@@ -1,0 +1,14 @@
+/* Reset Universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Evita barra de rolagem horizontal */
+  font-family: sans-serif;
+  scroll-behavior: smooth; /* O scroll suave que configuramos antes */
+  scroll-padding: 100px;
+}

@@ -1,0 +1,120 @@
+.header {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Isso garante que LOGO, MENU e BOTAO fiquem na mesma linha horizontal */
+  padding: 0.5rem 4rem; /* Aumentei o padding lateral para respirar mais */
+  background-color: #fff;/* Fundo escuro combina com verde */
+  position: relative;
+  width: 100%;
+  z-index: 999;
+}
+
+/* O ZOOM DA LOGO ACONTECE AQUI */
+.logo-img {
+  height: 40px; 
+  width: auto;
+  transform: scale(4.0); /* O zoom. Se ficar muito grande, diminua para 1.5, etc. */
+  transform-origin: left center; /* Garante que o zoom não empurre a logo para fora da tela */
+}
+
+.header a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.header a:hover {
+  color: #8cd21f;
+  scale: 1.6;
+  transition: all 0.3s ease;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* O Botão alinhado perfeitamente */
+#start{
+  background-color: transparent;
+  color: #8cd21f ;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #8cd21f;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#start:hover {
+  background-color: #8cd21f ;
+  color: #fff;
+  transform: scale(1.2); /* Efeito de botão pulsando ao passar o mouse */
+  transition: all 0.3s ease;
+}
+
+
+
+/* --- MOBILE --- */
+.btn-mobile {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000; /* Botão sempre acima do menu */
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px #dddddd3f;
+  padding: 2rem 0;
+  gap: 2rem;
+  z-index: 998;
+}
+
+/* O botão especial dentro do menu mobile */
+#comecar-mobile{
+  background-color: transparent;
+  color: #8cd21f ;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #8cd21f;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#comecar-mobile:hover {
+  background-color: #8cd21f ;
+  color: #fff;
+  transform: scale(1.2); /* Efeito de botão pulsando ao passar o mouse */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem; /* Reduz espaço lateral no celular */
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+  
+  .btn-start {
+    display: none; /* Esconde o botão normal no mobile para não espremer */
+  }
+
+  .btn-mobile {
+    display: block; /* Mostra o hamburger */
+  }
+
+  .nav-mobile.open {
+    display: flex; /* Faz a mágica de abrir o menu */
+  }
+}

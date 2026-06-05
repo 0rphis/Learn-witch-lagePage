@@ -1,0 +1,146 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  overflow: hidden;
+  color: #fff;
+  background-image: /* 1º Camada: O seu corte diagonal na esquerda */
+    linear-gradient(75deg, #010101 20%, rgba(114, 101, 101, 0) 100%), 
+    url("../assets/hero_background.png"); /* Imagem de fundo sutil */
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+
+
+/* --- Lado Esquerdo (Texto) --- */
+.hero-content {
+  flex: 1; /* Ocupa metade do espaço */
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge {
+  align-self: flex-start;
+  background-color: rgba(140, 210, 31, 0.1); /* Verde transparente */
+  color: #8cd21f;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border: 1px solid rgba(140, 210, 31, 0.3);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.destaque {
+  color: #8cd21f; /* Verde da EnergyFit */
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: #a0a0a0; /* Cinza claro para leitura agradável */
+  line-height: 1.6;
+}
+
+/* --- Botões --- */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #8cd21f;
+  border: 1px solid #8cd21f;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+
+}
+
+.btn-primary:hover {
+  background-color: #8cd21f;
+  transform: scale(1.05);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: 1px solid #8cd21f;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-secondary:hover {
+  background-color: #ffffff;
+  color: #8cd21f;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* --- Lado Direito (Imagem) --- */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-img {
+  max-width: auto;
+  height: auto;
+  border-radius: 8px; /* Dá uma leve arredondada nas bordas da foto */
+  /* Se a foto tiver fundo removido, o CSS abaixo dá um brilho verde legal atrás dela: */
+  /* filter: drop-shadow(0px 0px 20px rgba(140, 210, 31, 0.3)); */
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Coloca a imagem embaixo do texto */
+    padding: 3rem 2rem;
+    text-align: center; /* Centraliza tudo */
+    justify-content: center;
+  }
+
+  .badge {
+    align-self: center; /* Centraliza a badge no mobile */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Empilha os botões */
+    width: 100%;
+  }
+
+  .hero-image-container {
+    margin-top: 3rem;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,78 @@
+.sobre-section {
+  padding: 6rem 4rem;
+  background-color: #010101; /* Um tom de preto um pouquinho mais escuro que o Header para dar contraste */
+  color: #ffffff;
+}
+
+.sobre-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.sobre-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #8cd21f; /* Aquele verde destaque */
+}
+
+.sobre-header p {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+/* O Grid que organiza os 3 cards lado a lado no PC */
+.espaco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Visual de cada quadradinho */
+.card {
+  background-color: #141414;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  border: 1px solid #222;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* O card dá um pulinho pra cima quando passa o mouse */
+  border-color: #8cd21f;
+  scale: 1.05; /* Dá uma leve aumentada no card para destacar ainda mais */
+  transition: ease-in-out 1.0s;
+}
+
+.card-icon {
+  color: #8cd21f;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #a0a0a0;
+  line-height: 1.5;
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {
+  .sobre-section {
+    padding: 4rem 2rem;
+  }
+
+  .sobre-header h2 {
+    font-size: 2rem;
+  }
+
+  .espaco-grid {
+    grid-template-columns: 1fr; /* Quebra para 1 coluna só no celular, um card embaixo do outro */
+  }
+}
