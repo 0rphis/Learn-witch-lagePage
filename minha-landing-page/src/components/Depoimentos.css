@@ -1,0 +1,105 @@
+.depoimentos-section {
+  padding: 6rem 4rem;
+  background-color: #000000; 
+  color: rgba(1, 1, 1, 0.2);
+  overflow: hidden; /* Importante para o carrossel não vazar a tela e criar barra de rolagem */
+}
+
+.depoimentos-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.depoimentos-header h2 {
+  font-size: 2.5rem;
+  color: #8cd21f;
+  margin-bottom: 1rem;
+}
+
+.depoimentos-header p {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+}
+
+.swiper-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 4rem; /* Dá espaço para as bolinhas de paginação aparecerem */
+}
+
+.depoimento-card {
+  background-color: #0a0a0a; /* Fundo do card um pouco mais escuro para destacar */
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  border: 1px solid #222;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alinha o ícone pequeno com o texto */
+.quote-inline {
+  color: #8cd21f;
+  display: inline-block;
+  margin: 0 4px;
+  vertical-align: top;
+}
+
+/* Gira o segundo ícone de cabeça para baixo para parecer fechar aspas */
+.quote-inline.invertido {
+  transform: scaleX(-1);
+}
+
+.quote-icon {
+  color: #8cd21f;
+  opacity: 0.3;
+  margin-bottom: 1.5rem;
+}
+
+.texto {
+  font-size: 1.05rem;
+  color: #dcdcdc;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+  flex-grow: 1; /* Empurra o nome do aluno para a base do card */
+}
+
+
+
+.aluno-info h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.aluno-info span {
+  color: #8cd21f;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Hack do Swiper: Mudando a cor das bolinhas de paginação --- */
+.swiper-pagination-bullet {
+  background-color: #555 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #8cd21f !important;
+  width: 24px !important; /* Estica a bolinha ativa para parecer um tracinho */
+  border-radius: 12px !important;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .depoimentos-section {
+    padding: 4rem 2rem;
+  }
+
+  .depoimentos-header h2 {
+    font-size: 2rem;
+  }
+}

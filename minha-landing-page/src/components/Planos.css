@@ -1,0 +1,178 @@
+.planos-section {
+  padding: 6rem 4rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.planos-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.planos-header h2 {
+  font-size: 2.5rem;
+}
+
+.destaque-texto {
+  color: #8cd21f;
+}
+
+.planos-header p {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.planos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center; /* Centraliza os cards verticalmente */
+}
+
+/* --- Visual Base do Card --- */
+.plano-card {
+  background-color: #141414;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  position: relative; /* Necessário para a tag "Mais Escolhido" flutuar aqui dentro */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.plano-card:hover {
+  border-color: #8cd21f;
+  scale: 1.05; /* Aumenta o card em 25% ao passar o mouse */
+  transition: all 0.2s ease;
+}
+
+.plano-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #dcdcdc;
+}
+
+/* --- Preço --- */
+.preco-box {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #222;
+  padding-bottom: 2rem;
+}
+
+.moeda {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8cd21f;
+  margin-right: 0.2rem;
+}
+
+.valor {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.periodo {
+  color: #a0a0a0;
+  margin-left: 0.2rem;
+}
+
+/* --- Lista de Benefícios --- */
+.beneficios-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex-grow: 1; /* Empurra o botão para o fundo do card */
+}
+
+.beneficios-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: #dcdcdc;
+  font-size: 0.95rem;
+}
+
+.check-icon {
+  color: #8cd21f;
+  flex-shrink: 0; /* Impede que o ícone esmague se o texto for longo */
+}
+
+/* --- Botão Base --- */
+.btn-plano {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #222;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-plano:hover {
+  border-color: #8cd21f;
+  color: #8cd21f;
+}
+
+/* =========================================
+   O CARD CAMPEÃO DE VENDAS (Semestral)
+   ========================================= */
+.card-destaque {
+  border: 2px solid #8cd21f; /* Borda mais grossa e verde */
+  transform: scale(1.05); /* Deixa o card do meio 5% maior que os outros */
+  background-color: #0d1208; /* Um fundo bem de leve esverdeado */
+  z-index: 2; /* Garante que ele fique por cima dos outros se eles encostarem */
+}
+
+.card-destaque:hover {
+  transform: scale(1.08); /* Aumenta um pouquinho mais ao passar o mouse */
+}
+
+.tag-recomendado {
+  position: absolute;
+  top: -15px; /* Sobe para ficar na linha da borda */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #8cd21f;
+  color: #141414;
+  padding: 0.4rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.btn-destaque {
+  background-color: #8cd21f;
+  color: #141414;
+  border-color: #8cd21f;
+}
+
+.btn-destaque:hover {
+  background-color: #ffffff; /* Fica branco ao passar o mouse */
+  color: #141414;
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 992px) {
+  .planos-grid {
+    grid-template-columns: 1fr; /* Empilha os cards */
+    gap: 3rem; /* Aumenta o espaço para a tag flutuante não bater no card de cima */
+  }
+
+  .card-destaque {
+    transform: scale(1); /* Tira o aumento de tamanho no celular para não bugar a tela */
+  }
+  
+  .card-destaque:hover {
+    transform: scale(1.02);
+  }
+}

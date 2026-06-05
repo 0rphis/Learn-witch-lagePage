@@ -1,0 +1,164 @@
+.contato-wrapper {
+  background-color: #000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-section {
+  padding: 6rem 4rem;
+  flex-grow: 1;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Lado Esquerdo (Informações) --- */
+.contato-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contato-info p {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.info-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+.info-lista li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.info-icon {
+  color: #8cd21f;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: #ffffff;
+  background-color: #222;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #8cd21f;
+  color: #141414;
+  transform: translateY(-5px);
+}
+
+/* --- Lado Direito (Formulário) --- */
+.contato-form-container {
+  background-color: #0a0a0a;
+  padding: 3rem;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #dcdcdc;
+}
+
+/* Estilo dos campos de digitar */
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+/* Quando o usuário clica no campo, a borda fica verde */
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: #8cd21f;
+}
+
+.btn-enviar {
+  background-color: #8cd21f;
+  color: #141414;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-enviar:hover {
+  background-color: #ffffff;
+}
+
+/* --- Rodapé (Footer) --- */
+.footer-bottom {
+  text-align: center;
+  padding: 2rem;
+  background-color: #050505; /* O preto mais escuro de todos para fechar a tela */
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer-bottom p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+  .contato-grid {
+    grid-template-columns: 1fr; /* Coloca o formulário embaixo do texto */
+    gap: 3rem;
+  }
+
+  .contato-section {
+    padding: 4rem 2rem;
+  }
+  
+  .contato-form-container {
+    padding: 2rem;
+  }
+}

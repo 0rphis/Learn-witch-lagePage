@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import Contato from "./components/Contato";
+import Depoimentos from "./components/Depoimentos";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Planos from "./components/Planos";
 import Sobre from "./components/Sobre";
 
 // Importações obrigatórias para o AOS funcionar
@@ -23,7 +26,10 @@ export default function App() {
       <main>
         <Hero />
         <Sobre />
+        <Depoimentos />
+        <Planos />
       </main>
+      <Contato />
     </div>
   );
 }

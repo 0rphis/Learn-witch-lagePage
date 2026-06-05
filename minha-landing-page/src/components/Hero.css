@@ -67,7 +67,6 @@
   text-decoration: none;
   font-weight: bold;
   transition: transform 0.3s ease;
-
   display: inline-flex;
   align-items: center;
 
@@ -89,7 +88,6 @@
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-
   display: inline-flex;
   align-items: center;
 }
@@ -137,6 +135,16 @@
   .hero-buttons {
     flex-direction: column; /* Empilha os botões */
     width: 100%;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%; /* Botões ocupam toda a largura no mobile */
+    max-width: 320px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    justify-content: center; /* Centraliza o texto dos botões */
   }
 
   .hero-image-container {
